@@ -2,8 +2,7 @@ import "react-native-gesture-handler";
 import * as React from "react";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Contacts from "./containers/ContactsContainer";
-import Contact from "./containers/ContactContainer";
+import Home from "./containers/HomeContainer";
 
 const Stack = createStackNavigator();
 const MyTheme = {
@@ -24,12 +23,7 @@ function App() {
           },
         }}
       >
-        <Stack.Screen name="Contacts" component={Contacts} />
-        <Stack.Screen
-          name="Contact"
-          component={Contact}
-          options={{ title: "" }}
-        />
+        <Stack.Screen name="Home" component={Home} />
       </Stack.Navigator>
     </NavigationContainer>
   );
